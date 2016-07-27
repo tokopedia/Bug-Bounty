@@ -5,6 +5,8 @@ Tokopedia Bug Bounty Policy
 
 We are interested in any vulnerability that could negatively affect the security of our users.
 
+https://github.com/tokopedia/Bug-Bounty/blob/master/README.md
+
 ## In-Scope Vulnerability Classes
 
 * Cross-site Scripting (XSS)
