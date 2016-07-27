@@ -5,7 +5,7 @@ Tokopedia Bug Bounty Policy
 
 We are interested in any vulnerability that could negatively affect the security of our users.
 
-https://github.com/tokopedia/Bug-Bounty/blob/master/README.md
+[![StackShare](http://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](http://stackshare.io/tokopedia/tokopedia)
 
 ## In-Scope Vulnerability Classes
 
