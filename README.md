@@ -65,6 +65,7 @@ We are interested in any vulnerability that could negatively affect the security
 * event.tokopedia.com
 * kota.tokopedia.com
 * tkp.me
+* wiki.tokopedia.net
 
 # Rewards
 
