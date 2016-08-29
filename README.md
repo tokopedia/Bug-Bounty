@@ -62,7 +62,7 @@ We are interested in any vulnerability that could negatively affect the security
 
 * ciptakanpeluangmu.com
 * blog.tokopedia.com
-* event.tokopedia.com
+* events.tokopedia.com
 * kota.tokopedia.com
 * tkp.me
 * wiki.tokopedia.net
@@ -89,11 +89,11 @@ At the end of the day, all reward amounts are at our discretion, but we aim to b
 ## Bounty Payout Range
 N.B: the amounts listed here are the maximum we can pay for these categories of issues. This is meant as rough guidance on how we think about rewarding issues, ultimately we will reward largely based on the impact of the issue but at our discretion. 
 
-* **Critical issues (IDR 10 Million)** - Remote code execution on a production server. Exposure of information that identifies individuals (social security numbers, credit card numbers, bank account numbers, driver license images) Full account takeover of rider/partner account without interaction. Payment or partner invoice information exposure at scale. Potential access to source code. XSS in Toolshed (our internal account management system), or server-side request forgery (SSRF). Vulnerabilities leading to the compromise of an employee account (with a way to bypass two-factor).
+* **Critical issues (IDR 10 Million)** - Remote code execution on a production server. Exposure of information that identifies individuals (social security numbers, credit card numbers, bank account numbers) Full account takeover of account without interaction. Payment or partner invoice information exposure at scale. Potential access to source code. XSS in Toolshed (our internal account management system), or server-side request forgery (SSRF). Vulnerabilities leading to the compromise of an employee account (with a way to bypass two-factor).
 
 * **Significant Issues (IDR 5 Million)** - Stored Cross-site Scripting which can cause significant brand damage (e.g. in a homepage), missing authorization checks leading to the exposure of email addresses, date of birth, names, phone numbers, etc.
 
-* **Medium Issues (IDR 2 Million)** - Reflected Cross-site Scripting (XSS), most Cross-site Request Forgery (CSRF) issues, access control issues which do not exposed PII but affect other accounts, some account validation bypasses (being able to change driver picture, etc). Any vulnerability which allows the bulk lookup of user UUIDs (e.g. turn an auto-incrementing ID into a UUID, turn an email into a UUID).
+* **Medium Issues (IDR 2 Million)** - Reflected Cross-site Scripting (XSS), most Cross-site Request Forgery (CSRF) issues, access control issues which do not exposed PII but affect other accounts, some account validation bypasses (being able to change profile picture, etc). Any vulnerability which allows the bulk lookup of user UUIDs (e.g. turn an auto-incrementing ID into a UUID, turn an email into a UUID).
 
 * **Fraud Issues** - Send these to `fraud@tokopedia.com`. We currently do not reward for fraud issues. 
 
@@ -117,7 +117,7 @@ If you would like to report an issue related to fraud, please contact fraud@toko
 # Frequently Asked Questions
 
 ## Can I blog about my bug?
-Yes, but we ask that you wait until the issue is both fixed and paid out before you publish the blog post. We also prefer that you request disclosure through HackerOne so that readers of your blog post can get the full background on the issue.
+Yes, but we ask that you wait until the issue is both fixed and paid out before you publish the blog post. 
 
 ## What is your policy on chaining bugs and privilege escalation?
 Chaining of bugs is not frowned upon in any way, we love to see clever exploit chains! However, if you have managed to compromise a Tokopedia-owned server we do not allow for escalations such as port scanning internal networks, privilege escalation attempts, attempting to pivot to other systems, etc. If you get access to a Tokopedia server please report it us and we will reward you with an appropriate bounty taking into full consideration the severity of what could be done. Chaining a CSRF vulnerability with a self XSS? Nice! Using AWS access key to dump user info? Not cool.
