@@ -95,7 +95,7 @@ N.B: the amounts listed here are the maximum we can pay for these categories of 
 
 * **Medium Issues (IDR 2 Million)** - Reflected Cross-site Scripting (XSS), most Cross-site Request Forgery (CSRF) issues, access control issues which do not exposed PII but affect other accounts, some account validation bypasses (being able to change profile picture, etc). Any vulnerability which allows the bulk lookup of user UUIDs (e.g. turn an auto-incrementing ID into a UUID, turn an email into a UUID).
 
-* **Fraud Issues** - Send these to `fraud@tokopedia.com`. We currently do not reward for fraud issues. 
+* **Fraud Issues** - Send these to `fraudprevention@tokopedia.com`. We currently do not reward for fraud issues. 
 
 # Miscellany
 
