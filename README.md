@@ -108,7 +108,7 @@ You can view the changes to this policy over time at [hackerone.com/tokopedia/po
 
 ## Fraud issues
 
-If you would like to report an issue related to fraud, please contact fraud@tokopedia.com. These type of issues are important but we unfortunately cannot reward issues if this type at this time. Specifically promo code fraud and give-get fraud is abuse of our promotional offers and referral codes in order to get free rides from Tokopedia are a common submission. We do not consider these in scope for our bug bounty program at this time unless they show an explicit technical vulnerability in our software.  Lack of verification for things such as phone numbers, credit cards, etc are all fraud related issues and are not in scope for this bug bounty program.
+If you would like to report an issue related to fraud, please contact fraudprevention@tokopedia.com. These type of issues are important but we unfortunately cannot reward issues if this type at this time. Specifically promo code fraud and give-get fraud is abuse of our promotional offers and referral codes in order to get free rides from Tokopedia are a common submission. We do not consider these in scope for our bug bounty program at this time unless they show an explicit technical vulnerability in our software.  Lack of verification for things such as phone numbers, credit cards, etc are all fraud related issues and are not in scope for this bug bounty program.
 
 ## Examples of good bugs
 
