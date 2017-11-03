@@ -10,7 +10,7 @@ We are interested in any vulnerability that could negatively affect the security
 ## In-Scope Vulnerability Classes
 
 * Cross-site Scripting (XSS)
-* Cross-site Request Forgery
+* Cross-site Request Forgery (with high impact ex. update password)
 * Server-Side Request Forgery (SSRF)
 * SQL Injection
 * Server-side Remote Code Execution (RCE)
@@ -19,12 +19,12 @@ We are interested in any vulnerability that could negatively affect the security
 * Exposed Administrative Panels that don't require login credentials
 * Directory Traversal Issues
 * Local File Disclosure (LFD)
-* Open Redirects
 
 ## In-Scope Properties
 
 * \*.tokopedia.com (see exclusions below)
 * \*.tokopedia.net (see exclusions below)
+* tokocash.com
 * iPhone Application
 * Android Application
 * Android Seller Application
@@ -43,7 +43,7 @@ We are interested in any vulnerability that could negatively affect the security
 * Reports from automated web vulnerability scanners (Acunetix, Vega, etc.) that have not been validated.
 * Denial of Service Attacks.
 * Reflected File Download (RFD).
-* `window.opener`-related issues.
+* `window.opener` (tabnabbing) -related issues.
 * Physical or social engineering attempts (this includes phishing attacks against Tokopedia employees).
 * Content injection issues.
 * Cross-site Request Forgery (CSRF) with minimal security implications (Logout CSRF, etc.)
@@ -66,6 +66,7 @@ We are interested in any vulnerability that could negatively affect the security
 * kota.tokopedia.com
 * tkp.me
 * wiki.tokopedia.net
+* 3rd party(blog / microsite)
 
 # Rewards
 
@@ -91,9 +92,9 @@ N.B: the amounts listed here are the maximum we can pay for these categories of 
 
 * **Critical issues (IDR 10 Million)** - Remote code execution on a production server. Exposure of information that identifies individuals (social security numbers, credit card numbers, bank account numbers) Full account takeover of account without interaction. Payment or partner invoice information exposure at scale. Potential access to source code. XSS in Toolshed (our internal account management system), or server-side request forgery (SSRF). Vulnerabilities leading to the compromise of an employee account (with a way to bypass two-factor).
 
-* **Significant Issues (IDR 5 Million)** - Stored Cross-site Scripting which can cause significant brand damage (e.g. in a homepage), missing authorization checks leading to the exposure of email addresses, date of birth, names, phone numbers, etc.
+* **Significant Issues (IDR 2 - 5 Million)** - Stored Cross-site Scripting which can cause significant brand damage (e.g. in a homepage), missing authorization checks leading to the exposure of email addresses, date of birth, names, phone numbers, etc.
 
-* **Medium Issues (IDR 2 Million)** - Reflected Cross-site Scripting (XSS), most Cross-site Request Forgery (CSRF) issues, access control issues which do not exposed PII but affect other accounts, some account validation bypasses (being able to change profile picture, etc). Any vulnerability which allows the bulk lookup of user UUIDs (e.g. turn an auto-incrementing ID into a UUID, turn an email into a UUID).
+* **Medium Issues (IDR 1 - 2 Million)** - Reflected Cross-site Scripting (XSS), most Cross-site Request Forgery (CSRF) issues, access control issues which do not exposed PII but affect other accounts, some account validation bypasses (being able to change profile picture, etc). Any vulnerability which allows the bulk lookup of user UUIDs (e.g. turn an auto-incrementing ID into a UUID, turn an email into a UUID).
 
 * **Fraud Issues** - Send these to `fraudprevention@tokopedia.com`. We currently do not reward for fraud issues. 
 
@@ -110,9 +111,6 @@ You can view the changes to this policy over time at [hackerone.com/tokopedia/po
 
 If you would like to report an issue related to fraud, please contact fraudprevention@tokopedia.com. These type of issues are important but we unfortunately cannot reward issues if this type at this time. Specifically promo code fraud and give-get fraud is abuse of our promotional offers and referral codes in order to get free rides from Tokopedia are a common submission. We do not consider these in scope for our bug bounty program at this time unless they show an explicit technical vulnerability in our software.  Lack of verification for things such as phone numbers, credit cards, etc are all fraud related issues and are not in scope for this bug bounty program.
 
-## Examples of good bugs
-
-* https://blog.hrdn.us/how-i-hacked-imagetragick/
 
 # Frequently Asked Questions
 
