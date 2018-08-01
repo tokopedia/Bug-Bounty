@@ -1,136 +1,124 @@
-# Bug-Bounty
-Tokopedia Bug Bounty Policy
+# Tokopedia Bug Bounty Rules
+Keep user informations safe and secure are our top priority and a core company value at Tokopedia. we are pleased with contribution from external security researchers and look forward to awarding them for their invaluable contribution to the security of all Tokopedia users.
+## Responsible Disclosure Policy
+If you comply with the policies below when reporting a security issue to Tokopedia, we will not initiate a lawsuit or law enforcement investigation against you in response to your report. We ask that:
+- You give us reasonable time to investigate and mitigate an issue that you report before making any information about the report public or sharing such information with others.
+- You do not interact with an individual account (which includes modifying or accessing data from the account) if the account owner has not consented to such actions.
+- You make a good faith effort to avoid privacy violations and disruptions to others, including (but not limited to) unauthorised access to or destruction of data, and interruption or degradation of our services.
+- You do not exploit a security issue that you discover for any reason. (This includes demonstrating additional risk, such as attempted compromise of sensitive company data or probing for additional issues.)
+- You do not intentionally violate any other applicable laws or regulations, including (but not limited to) laws and regulations prohibiting the unauthorised access to data.
+- For the purposes of this policy, you are not authorised to access user data or company data, including (but not limited to) personally identifiable information and data relating to an identified or identifiable natural person.
+## Bug bounty program terms
+We recognise and reward security researchers who help us to keep people safe by reporting vulnerabilities in our services. Monetary bounties for such reports are entirely at Tokopedia's discretion, based on risk, impact and other factors. To potentially qualify for a bounty, you first need to meet the following requirements:
+- Adhere to our responsible disclosure policy (see above).
+- Report a security bug: identify a vulnerability in our services or infrastructure which creates a security or privacy risk. (Note that Tokopedia ultimately determines the risk of an issue, and that many software bugs are not security issues.)
+- Your report must describe a problem involving one of the products or services listed below (See "Bug Bounty Program").
+- We specifically exclude certain types of potential security issues; these are listed below (See "Bug Bounty Program").
+- Submit your report via our "Report a security vulnerability" form (one issue per report) and respond to the report with any updates. Please do not contact employees directly or through other channels about a report.
+- If you inadvertently cause a privacy violation or disruption (such as accessing account data, service configurations or other confidential information) while investigating an issue, you must disclose this in your report.
+- Use test accounts when investigating issues. If you cannot reproduce an issue with a test account, you can use a real account (except for automated testing). Do not interact with other accounts without consent.
+In turn, we will follow these guidelines when evaluating reports under our bug bounty programme:
+- We investigate and respond to all valid reports. Due to the volume of reports that we receive, however, we prioritise evaluations based on risk and other factors, and it may take some time before you receive a reply.
+- We determine bounty amounts based on a variety of factors, including (but not limited to) impact, ease of exploitation and quality of the report. 
+- We aim to pay similar amounts for similar issues, but bounty amounts and qualifying issues may change over time. Past rewards do not necessarily guarantee similar results in the future.
+- In the event of duplicate reports, we award a bounty to the first person to submit an issue. (Facebook determines duplicates and may not share details on the other reports.) A given bounty is only paid to one individual.
+- We reserve the right to publish reports (and accompanying updates).
+## In Scope
++ In Scope Properties
+```
+- *.tokopedia.com
+- *.tokopedia.net
+- payment.tokopedia.id
+- tokocash.com
+- iOS Application
+- Android Application
+- Android Seller Application
+```
++ In Scope Vulnerability
+```
+- SQL Injection
+- Cross-site Scripting (XSS)
+- Significant Authentication Bypass
+- Access Control Issues (Insecure Direct Object Reference issues, etc)
+- Cross-site Request Forgery in Critical Action
+- Information disclosure of Sensitive Information
+- Server-Side Request Forgery (SSRF)
+- Server-side Remote Code Execution (RCE)
+- XML External Entity Attacks (XXE)
+- Exposed Administrative Panels that don't require login credentials
+- Directory Traversal Issues
+- Local File Disclosure (LFD)
+- Server Side Template Injection (SSTI)
+```
+## Out of Scope
++ Out of Scope Properties
+```
+- 3rd Party Apps (Microsite, Wordpress, CMS, Blog, Even Inside tokopedia.com/* ,etc. )
+- 3rd Party Plugins
+```
++ Out of Scope Vulnerability
+```
+- Self-XSS (we require evidence on how the XSS can be used to attack another Tokopedia user).
+- We will accept reports of XSS on Out of Scope Properties but will not reward for them.
+- XSS issues that affect only outdated browsers.
+- Reports that state that software is out of date/vulnerable without a proof of concept.
+- Password, email and account policies, such as email id verification, reset link expiration, password complexity.
+- Missing security headers which do not lead directly to a vulnerability.
+- Missing best practices (we require evidence of a security vulnerability).
+- Host header injections unless you can show how they can lead to stealing user data.
+- Reports of spam (i.e., any report involving ability to send emails & SMS without rate limits).
+- Stack traces that disclose information.
+- Open Redirect
+- CSV injection.
+- Clickjacking
+- Highly speculative reports about theoretical damage. Be concrete.
+- Vulnerabilities as reported by automated tools without additional analysis as to how they're an issue.
+- Reports of insecure SSL/TLS ciphers (unless you have a working proof of concept, and not just a report from a scanner).
+- Reports from automated web vulnerability scanners (Acunetix, Vega, etc.) that have not been validated.
+- Social Engineering (Phishing,Fraud, etc.).
+- Denial of Service Attacks.
+- Reflected File Download (RFD).
+- window.opener (tabnabbing), related issues.
+- Physical or social engineering attempts (this includes phishing attacks against Tokopedia employees).
+- Content injection issues.
+- Most Brute Forcing issues
+- Cross-site Request Forgery (CSRF) with minimal security implications (Logout CSRF, etc.)
+- Missing autocomplete attributes.
+- Phishing risk via unicode/punycode or RTLO issues.
+- Being able to upload files with wrong extension in chooser.
+- Missing cookie flags on non-security-sensitive cookies.
+- Issues that require physical access to a victim’s computer.
+- Missing security headers that do not present an immediate security vulnerability.
+- Missing HTTP security headers, specifically, Example : Strict-Transport-Security, X-Frame-Options, X-XSS-Protection, X-Content-Type-Options, Content-Security-Policy, X-Content-Security-Policy, X-WebKit-CSP, Content-Security-Policy-Report-Only
+- Fraud issues (please see the below section elaborating on this).
+- SSL/TLS scan reports (this means output from sites such as SSL Labs).
+- Banner grabbing issues (figuring out what web server we use, etc.).
+- Open ports without an accompanying proof-of-concept demonstrating vulnerability.
+- Recently disclosed 0day vulnerabilities. We need time to patch our systems, please give us 1 month before reporting these types of issues.
+- Entering the Tokopedia offices, throwing crisps everywhere, unleashing a bunch of hungry racoons, and hijacking an abandoned terminal on an unlocked workstation while staff are distracted..
+```
 
-# Scope
+## Reporting Guidlines
+- For security bug report, please send email to **security@tokopedia.com**, including proof of concept in PDF format that contains: step by steps, screenshoot and the remediation. Don't forget to attached proof of concept video to reproduce the vulnerabilty.
+- Please download the report template : **DOWNLOAD**
+- Send email with subject: **[BUG BOUNTY TOKOPEDIA] Judul Vulnerability**
+```
+Example : [BUG BOUNTY TOKOPEDIA] Reflected XSS on Search Product
+```
 
-We are interested in any vulnerability that could negatively affect the security of our users.
+## Frequently asked questions
+**Q: What if I found a vulnerability, but I don't know how to exploit it?**
 
-[![StackShare](http://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](http://stackshare.io/tokopedia/tokopedia)
+A: We expect that vulnerability reports sent to us have a valid attack scenario to qualify for a reward, and we consider it as a critical step when doing vulnerability research. Reward amounts are decided based on the maximum impact of the vulnerability, and the panel is willing to reconsider a reward amount, based on new information (such as a chain of bugs, or a revised attack scenario).
 
-## In-Scope Vulnerability Classes
+**Q: Who determines whether my report is eligible for a reward?**
 
-* Cross-site Scripting (XSS)
-* Cross-site Request Forgery (with high impact ex. update password)
-* Server-Side Request Forgery (SSRF)
-* SQL Injection
-* Server-side Remote Code Execution (RCE)
-* XML External Entity Attacks (XXE)
-* Access Control Issues (Insecure Direct Object Reference issues, etc)
-* Exposed Administrative Panels that don't require login credentials
-* Directory Traversal Issues
-* Local File Disclosure (LFD)
+A: The reward panel consists of the members of the Tokopedia Security Team.
 
-## In-Scope Properties
+**Q: When will reward be paid?**
 
-* \*.tokopedia.com (see exclusions below)
-* \*.tokopedia.net (see exclusions below)
-* tokocash.com
-* iPhone Application
-* Android Application
-* Android Seller Application
+A: You will be paid after the vulnerabilty has been fixed by our engineer. So give us reasonable time to fix it.
 
-## Out-of-scope Vulnerability Classes
+**Q: What happens if I disclose the bug publicly before you had a chance to fix it?**
 
-* Reports that state that software is out of date/vulnerable without a proof of concept.
-* Host header issues without an accompanying proof-of-concept demonstrating vulnerability.
-* XSS issues that affect only outdated browsers.
-* Stack traces that disclose information.
-* CSV injection. Please see [this article](https://sites.google.com/site/bughunteruniversity/nonvuln/csv-excel-formula-injection).
-* Best practices concerns.
-* Highly speculative reports about theoretical damage. Be concrete.
-* Self-XSS that can not be used to exploit other users (this includes having a user paste JavaScript into the browser console).
-* Vulnerabilities as reported by automated tools without additional analysis as to how they're an issue.
-* Reports from automated web vulnerability scanners (Acunetix, Vega, etc.) that have not been validated.
-* Denial of Service Attacks.
-* Reflected File Download (RFD).
-* `window.opener` (tabnabbing) -related issues.
-* Physical or social engineering attempts (this includes phishing attacks against Tokopedia employees).
-* Content injection issues.
-* Cross-site Request Forgery (CSRF) with minimal security implications (Logout CSRF, etc.)
-* Missing autocomplete attributes.
-* Missing cookie flags on non-security-sensitive cookies.
-* Issues that require physical access to a victim’s computer.
-* Missing security headers that do not present an immediate security vulnerability.
-* Fraud issues (please see the below section elaborating on this).
-* SSL/TLS scan reports (this means output from sites such as SSL Labs).
-* Banner grabbing issues (figuring out what web server we use, etc.).
-* Open ports without an accompanying proof-of-concept demonstrating vulnerability.
-* Recently disclosed 0day vulnerabilities. We need time to patch our systems just like everyone else - please give us two weeks before reporting these types of issues.
-* Entering the Tokopedia offices, throwing crisps everywhere, unleashing a bunch of hungry racoons, and hijacking an abandoned terminal on an unlocked workstation while staff are distracted.
-
-## Out-of-scope Properties
-
-* ciptakanpeluangmu.com
-* blog.tokopedia.com
-* events.tokopedia.com
-* kota.tokopedia.com
-* tkp.me
-* wiki.tokopedia.net
-* 3rd party(blog / microsite)
-
-# Rewards
-
-Our rewards are impact-based. This means, for example, that we will issue a relatively high reward for a vulnerability that has the potential to leak sensitive user data, but that we will issue little to no reward for a vulnerability that allows an attacker to deface a microsite. When we have our reward meetings, we always ask one question: If a malicious attacker abuses this, how bad off are we? We assume the worst and pay out the bug accordingly.
-
-If we receive several reports for the same issue, we offer the bounty to the earliest report for which we had enough actionable information to identify the issue. We don't want to encourage people spamming us with vague issues in an attempt to be first.
-
-If a single fix fixes multiple vulnerabilities, we treat this as a single vulnerability.  For example, if you find 3 vulnerabilties in a WordPress plugin we use, and our fix is to remove the plugin, this will receive a single bounty, determined, as always, by impact.
-
-The payout ranges on this page are guidelines to express roughly how we think about the severity of classes of issues. They are not exact rules. There can be attributes of bugs that make them more or less severe, which will affect the payout. For example, if a vulnerability affects only a small population of users, it will likely receive a lower reward than a similar vulnerability that affects a larger population of users. To date, we have most commonly rewarded on the top end of our published payout ranges.
-
-At the end of the day, all reward amounts are at our discretion, but we aim to be fair. Some researchers won't agree with some of our decisions, but we're paying out to the best of our ethical ability and trust that the majority of researchers will consider their rewards fair and in many cases generous. We will adapt as the program continues.
-
-## Things you should expect to receive little to no bounty for
-
-* Microsites with little to no user data
-* Issues requiring user-interaction
-* Outdated wordpress instances
-* Most brute forcing issues
-
-## Bounty Payout Range
-N.B: the amounts listed here are the maximum we can pay for these categories of issues. This is meant as rough guidance on how we think about rewarding issues, ultimately we will reward largely based on the impact of the issue but at our discretion. 
-
-* **Critical issues (IDR 10 Million)** - Remote code execution on a production server. Exposure of information that identifies individuals (social security numbers, credit card numbers, bank account numbers) Full account takeover of account without interaction. Payment or partner invoice information exposure at scale. Potential access to source code. XSS in Toolshed (our internal account management system), or server-side request forgery (SSRF). Vulnerabilities leading to the compromise of an employee account (with a way to bypass two-factor).
-
-* **Significant Issues (IDR 2 - 5 Million)** - Stored Cross-site Scripting which can cause significant brand damage (e.g. in a homepage), missing authorization checks leading to the exposure of email addresses, date of birth, names, phone numbers, etc.
-
-* **Medium Issues (IDR 1 - 2 Million)** - Reflected Cross-site Scripting (XSS), most Cross-site Request Forgery (CSRF) issues, access control issues which do not exposed PII but affect other accounts, some account validation bypasses (being able to change profile picture, etc). Any vulnerability which allows the bulk lookup of user UUIDs (e.g. turn an auto-incrementing ID into a UUID, turn an email into a UUID).
-
-* **Fraud Issues** - Send these to `fraudprevention@tokopedia.com`. We currently do not reward for fraud issues. 
-
-# Miscellany
-
-## Reporting Guidelines
-We need detailed written steps to reproduce. We do not accept reports that include only a video. Report your issue to security@tokopedia.com.
-
-## Policy Changes
-
-You can view the changes to this policy over time at [hackerone.com/tokopedia/policy_versions](https://hackerone.com/tokopedia/policy_versions).
-
-## Fraud issues
-
-If you would like to report an issue related to fraud, please contact fraudprevention@tokopedia.com. These type of issues are important but we unfortunately cannot reward issues if this type at this time. Specifically promo code fraud and give-get fraud is abuse of our promotional offers and referral codes in order to get free rides from Tokopedia are a common submission. We do not consider these in scope for our bug bounty program at this time unless they show an explicit technical vulnerability in our software.  Lack of verification for things such as phone numbers, credit cards, etc are all fraud related issues and are not in scope for this bug bounty program.
-
-
-# Frequently Asked Questions
-
-## Can I blog about my bug?
-Yes, but we ask that you wait until the issue is both fixed and paid out before you publish the blog post. 
-
-## What is your policy on chaining bugs and privilege escalation?
-Chaining of bugs is not frowned upon in any way, we love to see clever exploit chains! However, if you have managed to compromise a Tokopedia-owned server we do not allow for escalations such as port scanning internal networks, privilege escalation attempts, attempting to pivot to other systems, etc. If you get access to a Tokopedia server please report it us and we will reward you with an appropriate bounty taking into full consideration the severity of what could be done. Chaining a CSRF vulnerability with a self XSS? Nice! Using AWS access key to dump user info? Not cool.
-
-## Do you provide test accounts?
-As of this time we do not have a good system for creating test accounts for our bug bounty submitters. Please create an account as you would normally and perform testing with that account or accounts.  Whenever possible only test against yourself, never other users. If there is ever a situation where you cannot test a bug while adhering to this please let us know and we will help figure out an appropriate solution.
-
-## What about public disclosure?
-Found a particularly interesting or clever bug in a Tokopedia service? We’re more than happy to publicly disclose your bug once it has been remediated by our developers. Please note that in certain situations we may request more time to investigate an issue internally to ensure that it is properly fixed across all Tokopedia services. Public disclosure before Tokopedia has had time to remediate an issue is grounds for immediate forfeiture of any reward as well as possible removal from the bug bounty program.
-
-## What is a Tokopedia microsite?
-An Tokopedia microsite is a website which is not explicitly listed in the scope above but is made by a Tokopedia employee and owned by Tokopedia. The most common examples of microsites include Tokopedia city sites, blogs, and partner incentive sites.
-
-## Are Tokopedia microsites (for example, our blogs and city-specific Tokopedia sites) in scope?
-Microsites are an important part of how Tokopedia reaches people to communicates programs, offers and policies. Since they have smaller audiences, shouldn't contain much or any user data and aren’t part of the our core services, the impact of issues on these sites is significantly less severe. Since we are primary interested in vulnerabilities which could lead to the exfiltration of customer information, vulnerabilities in microsite services will not be rewarded for except in extraordinary circumstances. Generally there are better areas to spend your time than microsites.
-
-# Program terms
-Your participation in the Bug Bounty Program is voluntary and subject to the [Bug Bounty Program Terms](https://www.tokopedia.com/legal/other/bug-bounty-program-terms/).
+A: Please read our **Responsible Disclosure Policy**. In essence, our pledge to you is to respond promptly and fix bugs in a sensible timeframe - and in exchange, we ask for a reasonable advance notice. Reports that go against this principle will usually not qualify, and we cancel the reward. And if it contains sensitive information, it doesn't close the possibility to litigate by applicable laws. 
