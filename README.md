@@ -100,7 +100,7 @@ In turn, we will follow these guidelines when evaluating reports under our bug b
 
 ## Reporting Guidlines
 - For security bug report, please send email to **security@tokopedia.com**, including proof of concept in PDF format that contains: step by steps, screenshoot and the remediation. Don't forget to attached proof of concept video to reproduce the vulnerabilty.
-- Please download the report template : **DOWNLOAD**
+- Please download the report template : [**Download**](https://github.com/tokopedia/Bug-Bounty/blob/master/Template%20Laporan%20-%20Bug%20Report%20Tokopedia.docx)
 - Send email with subject: **[BUG BOUNTY TOKOPEDIA] Judul Vulnerability**
 ```
 Example : [BUG BOUNTY TOKOPEDIA] Reflected XSS on Search Product
