@@ -21,7 +21,7 @@ In turn, we will follow these guidelines when evaluating reports under our bug b
 - We investigate and respond to all valid reports. Due to the volume of reports that we receive, however, we prioritise evaluations based on risk and other factors, and it may take some time before you receive a reply.
 - We determine bounty amounts based on a variety of factors, including (but not limited to) impact, ease of exploitation and quality of the report. 
 - We aim to pay similar amounts for similar issues, but bounty amounts and qualifying issues may change over time. Past rewards do not necessarily guarantee similar results in the future.
-- In the event of duplicate reports, we award a bounty to the first person to submit an issue. (Facebook determines duplicates and may not share details on the other reports.) A given bounty is only paid to one individual.
+- In the event of duplicate reports, we award a bounty to the first person to submit an issue. (Tokopedia determines duplicates and may not share details on the other reports.) A given bounty is only paid to one individual.
 - We reserve the right to publish reports (and accompanying updates).
 ## In Scope
 + In Scope Properties
