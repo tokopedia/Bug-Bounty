@@ -111,6 +111,7 @@ Example : [BUG BOUNTY TOKOPEDIA] Reflected XSS on Search Product
 - Medium (Certificate & Rewards)
 - High (Certificate & Rewards)
 - Critical (Certificate & Rewards)
+
 **Note : We will proceed the reward as soon as possible after completely verification, keep in mind that it can take up to 90 days to receive the reward.**
 
 ## Frequently asked questions
