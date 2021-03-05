@@ -8,6 +8,7 @@ If you comply with the policies below when reporting a security issue to Tokoped
 - You do not exploit a security issue that you discover for any reason. (This includes demonstrating additional risk, such as attempted compromise of sensitive company data or probing for additional issues.)
 - You do not intentionally violate any other applicable laws or regulations, including (but not limited to) laws and regulations prohibiting the unauthorised access to data.
 - For the purposes of this policy, you are not authorised to access user data or company data, including (but not limited to) personally identifiable information and data relating to an identified or identifiable natural person.
+- If you want to publish the vulnerability you reporting, please give us reasonable time to fix it and you can disclose it to the public after you receive approval from Tokopedia team and at least 3 months after the vulnerability is fixed.
 ## Bug bounty program terms
 We recognise and reward security researchers who help us to keep people safe by reporting vulnerabilities in our services. Monetary bounties for such reports are entirely at Tokopedia's discretion, based on risk, impact and other factors. To potentially qualify for a bounty, you first need to meet the following requirements:
 - Adhere to our responsible disclosure policy (see above).
