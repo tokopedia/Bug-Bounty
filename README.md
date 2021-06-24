@@ -1,1 +1,1 @@
-https://bounty.tokopedia.net/rules
+this repo is depcrecated, please refer to https://bounty.tokopedia.net/rules
