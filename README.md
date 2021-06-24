@@ -103,11 +103,11 @@ In turn, we will follow these guidelines when evaluating reports under our bug b
 - Please send the details of the report through this link : **https://bounty.tokopedia.net**
 
 ## Bug Severity Terms
-- Info (No Reward & No Certificate)
-- Low (Certificate Only)
-- Medium (Certificate & Rewards)
-- High (Certificate & Rewards)
-- Critical (Certificate & Rewards)
+- Info (No Reward & No wall of fame)
+- Low (Tokopedia voucher & Wall of fame)
+- Medium (Rewards & Wall of fame)
+- High (Rewards & Wall of fame)
+- Critical (Rewards & Wall of fame)
 
 **Note : We will proceed the reward as soon as possible after completely verification, keep in mind that it can take up to 90 days to receive the reward.**
 
